@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _18.TransportPrice
+{
+    class transportPrice
+    {
+        static void Main(string[] args)
+        {
+            int km = int.Parse(Console.ReadLine());
+            string dayOrNignt = Console.ReadLine();
+           
+
+
+            if (km <20)
+            {
+                if (dayOrNignt == "day")
+                {
+                    Console.WriteLine("{0:f2}", (km * 0.79d) + 0.70d);
+                }
+                else if (dayOrNignt == "night")
+                {
+                    Console.WriteLine("{0:f2}", (km * 0.90d) + 0.70d);
+                }
+            }
+            else if (km >= 20 && km <100)
+            {
+                Console.WriteLine( "{0:f2}",km * 0.09d);
+            }
+            else
+            {
+                Console.WriteLine("{0:f2}",km*0.06d);
+            }
+                   
+
+        }
+    }
+} 
